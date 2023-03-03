@@ -50,7 +50,7 @@ describe('Toggle Dark Mode', () => {
             cy.title().should('eq', 'Pokémon Awesome')
         })
 
-        it.only('can toggle to dark/white mode', () => {
+        it('can toggle to dark/white mode', () => {
             // toggle to dark mode
             cy.get('label[for="darkmode-toggle"]').click()
             cy.get('html').should('have.class', 'dark')
