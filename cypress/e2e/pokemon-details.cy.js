@@ -13,16 +13,6 @@ describe('Pokémon Details', () => {
             cy.title().should('eq', 'Bulbasaur #001 | Pokémon Awesome')
         })
 
-        it('can view pokémon details', () => {
-            // display pokémon details
-            cy.contains('#001').should('be.visible')
-            cy.contains('Evolution Chain').should('be.visible')
-            cy.contains('Habitat').should('be.visible')
-            cy.contains('Moves').should('be.visible')
-            cy.contains('Base Stats').should('be.visible')
-            cy.contains('Abilities').should('be.visible')
-        })
-
         it('can view evolution details', () => {
             // click "Ivysaur"
             cy.contains('a', 'Ivysaur').click()
@@ -57,16 +47,6 @@ describe('Pokémon Details', () => {
             cy.title().should('eq', 'Bulbasaur #001 | Pokémon Awesome')
         })
 
-        it('can view pokémon details', () => {
-            // display pokémon details
-            cy.contains('#001').should('be.visible')
-            cy.contains('Evolution Chain').should('be.visible')
-            cy.contains('Habitat').should('be.visible')
-            cy.contains('Moves').should('be.visible')
-            cy.contains('Base Stats').should('be.visible')
-            cy.contains('Abilities').should('be.visible')
-        })
-
         it('can view evolution details', () => {
             // click "Ivysaur"
             cy.contains('a', 'Ivysaur').click()
@@ -99,16 +79,6 @@ describe('Pokémon Details', () => {
             cy.get('.pokemon-card').first().click()
             cy.location('pathname').should('eq', '/pokemon/bulbasaur')
             cy.title().should('eq', 'Bulbasaur #001 | Pokémon Awesome')
-        })
-
-        it('can view pokémon details', () => {
-            // display pokémon details
-            cy.contains('#001').should('be.visible')
-            cy.contains('Evolution Chain').should('be.visible')
-            cy.contains('Habitat').should('be.visible')
-            cy.contains('Moves').should('be.visible')
-            cy.contains('Base Stats').should('be.visible')
-            cy.contains('Abilities').should('be.visible')
         })
 
         it('can view evolution details', () => {
