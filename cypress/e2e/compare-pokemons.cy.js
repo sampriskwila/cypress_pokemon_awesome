@@ -16,7 +16,7 @@ describe('Compare Pokémons', () => {
             cy.get('input[type="search"]').type('pic')
             cy.get('body').click()
 
-            // search field empty and not focus
+            // search field become empty and not focus
             cy.get('input[type="search"]').should('be.empty').and('not.be.focused')
         })
 
@@ -33,6 +33,7 @@ describe('Compare Pokémons', () => {
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu').should('be.visible')
 
+            // then view "Pichu" details
             cy.contains('a', 'Details →').first().click()
             cy.location('pathname').should('eq', '/pokemon/pichu')
         })
@@ -132,7 +133,7 @@ describe('Compare Pokémons', () => {
             cy.get('input[type="search"]').type('pic')
             cy.get('body').click()
 
-            // search field empty and not focus
+            // search field become empty and not focus
             cy.get('input[type="search"]').should('be.empty').and('not.be.focused')
         })
 
@@ -149,6 +150,7 @@ describe('Compare Pokémons', () => {
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu')
 
+            // then view "Pichu" details
             cy.contains('a', 'Details →').first().click()
             cy.location('pathname').should('eq', '/pokemon/pichu')
         })
@@ -232,7 +234,7 @@ describe('Compare Pokémons', () => {
             cy.get('input[type="search"]').type('pic')
             cy.get('body').click()
 
-            // search field empty and not focus
+            // search field become empty and not focus
             cy.get('input[type="search"]').should('be.empty').and('not.be.focused')
         })
 
@@ -249,6 +251,7 @@ describe('Compare Pokémons', () => {
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu')
 
+            // then view "Pichu" details
             cy.contains('a', 'Details →').first().click()
             cy.location('pathname').should('eq', '/pokemon/pichu')
         })
