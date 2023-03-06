@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Search & Filter Pokémon', () => {
     context('1440px resolution - success cases', () => {
         beforeEach(() => {

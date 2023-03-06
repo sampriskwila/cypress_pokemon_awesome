@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Compare Pokémons', () => {
     context('1440px resolution - success cases', () => {
         beforeEach(() => {

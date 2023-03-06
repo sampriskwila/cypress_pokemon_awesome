@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Pokémon Details', () => {
     context('1440px resolution', () => {
         beforeEach(() => {

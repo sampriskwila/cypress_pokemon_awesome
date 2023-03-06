@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Toggle Dark Mode', () => {
     context('1440px resolution', () => {
         beforeEach(() => {
