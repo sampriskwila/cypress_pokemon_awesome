@@ -149,7 +149,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon generations, then search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII"
             cy.contains('select', 'All generations')
@@ -167,7 +167,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon types, then search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Bug"
             cy.contains('select', 'All types').select('Bug').should('have.value', 7)
@@ -188,7 +188,7 @@ describe('Search & Filter Pokémon', () => {
             cy.contains('Dottler').should('be.visible')
 
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -205,7 +205,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can search and filter pokémon at once', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -236,7 +236,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon generations, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII"
             cy.contains('select', 'All generations')
@@ -254,7 +254,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon types, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Bug"
             cy.contains('select', 'All types').select('Bug').should('have.value', 7)
@@ -275,7 +275,7 @@ describe('Search & Filter Pokémon', () => {
             cy.contains('Pikachu').should('be.visible')
 
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -290,7 +290,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -321,7 +321,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon generations, then search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII"
             cy.contains('select', 'All generations')
@@ -339,7 +339,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon types, then search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Bug"
             cy.contains('select', 'All types').select('Bug').should('have.value', 7)
@@ -360,7 +360,7 @@ describe('Search & Filter Pokémon', () => {
             cy.contains('Dottler').should('be.visible')
 
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -377,7 +377,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can search and filter pokémon at once', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -408,7 +408,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon generations, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII"
             cy.contains('select', 'All generations')
@@ -426,7 +426,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon types, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Bug"
             cy.contains('select', 'All types').select('Bug').should('have.value', 7)
@@ -447,7 +447,7 @@ describe('Search & Filter Pokémon', () => {
             cy.contains('Pikachu').should('be.visible')
 
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')
@@ -462,7 +462,7 @@ describe('Search & Filter Pokémon', () => {
 
         it('can filter pokémon, but fail to search pokémon', () => {
             // toggle filter button
-            cy.get('button[title="Filter"]').eq('0').click()
+            cy.get('button[title="Filter"]').eq(0).click()
 
             // filter "Generation VIII" and "Bug"
             cy.contains('select', 'All generations')

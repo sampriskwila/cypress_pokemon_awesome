@@ -1,4 +1,4 @@
-Cypress.Commands.add('compare_pokemon', (search, expected) => {
+Cypress.Commands.add('compare_pokemon', (search: string, expected: string) => {
     cy.get('input[type="search"]').as('input')
 
     cy.get('@input').type(search).should('have.value', search)
