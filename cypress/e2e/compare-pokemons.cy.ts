@@ -20,13 +20,13 @@ describe('Compare Pokémons', () => {
 
         it('can compare two pokémons, then view pokémon detail', () => {
             // search "pic"
-            cy.compare_pokemon('pic', 'Pichu')
+            cy.comparePokemon('pic', 'Pichu')
             cy.location('search').should('eq', '?pokemons=pichu')
             cy.contains('Compare Pichu with...').should('be.visible')
             cy.contains('VS').should('be.visible')
 
             // search "pika"
-            cy.compare_pokemon('pika', 'Pikachu')
+            cy.comparePokemon('pika', 'Pikachu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu').should('be.visible')
@@ -38,9 +38,9 @@ describe('Compare Pokémons', () => {
 
         it('can compare three pokémons, and delete last pokémon', () => {
             // search "pic, pika, rai"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu,raichu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu vs Raichu').should('be.visible')
@@ -59,11 +59,11 @@ describe('Compare Pokémons', () => {
 
         it('can compare five pokémons, and toggle expand button', () => {
             // search "pic, pika, rai, bul, ivy"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
-            cy.compare_pokemon('bul', 'Bulbasaur')
-            cy.compare_pokemon('ivy', 'Ivysaur')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
+            cy.comparePokemon('bul', 'Bulbasaur')
+            cy.comparePokemon('ivy', 'Ivysaur')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu,raichu,bulbasaur,ivysaur')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu vs Raichu vs Bulbasaur vs Ivysaur').should('be.visible')
@@ -75,16 +75,16 @@ describe('Compare Pokémons', () => {
 
         it('can compare up to ten pokémons, and hide search field', () => {
             // search "pic, pika, rai, bul, ivy, venu, squi, war, blas, gas"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
-            cy.compare_pokemon('bul', 'Bulbasaur')
-            cy.compare_pokemon('ivy', 'Ivysaur')
-            cy.compare_pokemon('venu', 'Venusaur')
-            cy.compare_pokemon('squi', 'Squirtle')
-            cy.compare_pokemon('war', 'Wartortle')
-            cy.compare_pokemon('blas', 'Blastoise')
-            cy.compare_pokemon('gas', 'Gastly')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
+            cy.comparePokemon('bul', 'Bulbasaur')
+            cy.comparePokemon('ivy', 'Ivysaur')
+            cy.comparePokemon('venu', 'Venusaur')
+            cy.comparePokemon('squi', 'Squirtle')
+            cy.comparePokemon('war', 'Wartortle')
+            cy.comparePokemon('blas', 'Blastoise')
+            cy.comparePokemon('gas', 'Gastly')
             cy.location('search').should(
                 'eq',
                 '?pokemons=pichu,pikachu,raichu,bulbasaur,ivysaur,venusaur,squirtle,wartortle,blastoise,gastly',
@@ -111,7 +111,7 @@ describe('Compare Pokémons', () => {
 
         it('fail to search not existed pokémon', () => {
             // search "digimon"
-            cy.compare_pokemon('digimon', 'Nothing found.')
+            cy.comparePokemon('digimon', 'Nothing found.')
             cy.location('search').should('be.empty')
         })
     })
@@ -137,13 +137,13 @@ describe('Compare Pokémons', () => {
 
         it('can compare two pokémons, then view pokémon detail', () => {
             // search "pic"
-            cy.compare_pokemon('pic', 'Pichu')
+            cy.comparePokemon('pic', 'Pichu')
             cy.location('search').should('eq', '?pokemons=pichu')
             cy.contains('Compare Pichu with...').should('be.visible')
             cy.contains('VS').should('be.visible')
 
             // search "pika"
-            cy.compare_pokemon('pika', 'Pikachu')
+            cy.comparePokemon('pika', 'Pikachu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu')
@@ -155,9 +155,9 @@ describe('Compare Pokémons', () => {
 
         it('can compare three pokémons, and delete last pokémon', () => {
             // search "pic, pika, rai"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu,raichu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu vs Raichu').should('be.visible')
@@ -176,16 +176,16 @@ describe('Compare Pokémons', () => {
 
         it('can compare up to ten pokémons, and hide search field', () => {
             // search "pic, pika, rai, bul, ivy, venu, squi, war, blas, gas"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
-            cy.compare_pokemon('bul', 'Bulbasaur')
-            cy.compare_pokemon('ivy', 'Ivysaur')
-            cy.compare_pokemon('venu', 'Venusaur')
-            cy.compare_pokemon('squi', 'Squirtle')
-            cy.compare_pokemon('war', 'Wartortle')
-            cy.compare_pokemon('blas', 'Blastoise')
-            cy.compare_pokemon('gas', 'Gastly')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
+            cy.comparePokemon('bul', 'Bulbasaur')
+            cy.comparePokemon('ivy', 'Ivysaur')
+            cy.comparePokemon('venu', 'Venusaur')
+            cy.comparePokemon('squi', 'Squirtle')
+            cy.comparePokemon('war', 'Wartortle')
+            cy.comparePokemon('blas', 'Blastoise')
+            cy.comparePokemon('gas', 'Gastly')
             cy.location('search').should(
                 'eq',
                 '?pokemons=pichu,pikachu,raichu,bulbasaur,ivysaur,venusaur,squirtle,wartortle,blastoise,gastly',
@@ -212,7 +212,7 @@ describe('Compare Pokémons', () => {
 
         it('fail to search not existed pokémon', () => {
             // search "digimon"
-            cy.compare_pokemon('digimon', 'Nothing found.')
+            cy.comparePokemon('digimon', 'Nothing found.')
             cy.location('search').should('be.empty')
         })
     })
@@ -238,13 +238,13 @@ describe('Compare Pokémons', () => {
 
         it('can compare two pokémons, then view pokémon detail', () => {
             // search "pic"
-            cy.compare_pokemon('pic', 'Pichu')
+            cy.comparePokemon('pic', 'Pichu')
             cy.location('search').should('eq', '?pokemons=pichu')
             cy.contains('Compare Pichu with...').should('be.visible')
             cy.contains('VS').should('be.visible')
 
             // search "pika"
-            cy.compare_pokemon('pika', 'Pikachu')
+            cy.comparePokemon('pika', 'Pikachu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu')
@@ -256,9 +256,9 @@ describe('Compare Pokémons', () => {
 
         it('can compare three pokémons, and delete last pokémon', () => {
             // search "pic, pika, rai"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
             cy.location('search').should('eq', '?pokemons=pichu,pikachu,raichu')
             cy.get('.pokemon-elm > img').should('be.visible')
             cy.contains('Pichu vs Pikachu vs Raichu').should('be.visible')
@@ -277,16 +277,16 @@ describe('Compare Pokémons', () => {
 
         it('can compare up to ten pokémons, and hide search field', () => {
             // search "pic, pika, rai, bul, ivy, venu, squi, war, blas, gas"
-            cy.compare_pokemon('pic', 'Pichu')
-            cy.compare_pokemon('pika', 'Pikachu')
-            cy.compare_pokemon('rai', 'Raichu')
-            cy.compare_pokemon('bul', 'Bulbasaur')
-            cy.compare_pokemon('ivy', 'Ivysaur')
-            cy.compare_pokemon('venu', 'Venusaur')
-            cy.compare_pokemon('squi', 'Squirtle')
-            cy.compare_pokemon('war', 'Wartortle')
-            cy.compare_pokemon('blas', 'Blastoise')
-            cy.compare_pokemon('gas', 'Gastly')
+            cy.comparePokemon('pic', 'Pichu')
+            cy.comparePokemon('pika', 'Pikachu')
+            cy.comparePokemon('rai', 'Raichu')
+            cy.comparePokemon('bul', 'Bulbasaur')
+            cy.comparePokemon('ivy', 'Ivysaur')
+            cy.comparePokemon('venu', 'Venusaur')
+            cy.comparePokemon('squi', 'Squirtle')
+            cy.comparePokemon('war', 'Wartortle')
+            cy.comparePokemon('blas', 'Blastoise')
+            cy.comparePokemon('gas', 'Gastly')
             cy.location('search').should(
                 'eq',
                 '?pokemons=pichu,pikachu,raichu,bulbasaur,ivysaur,venusaur,squirtle,wartortle,blastoise,gastly',
@@ -313,7 +313,7 @@ describe('Compare Pokémons', () => {
 
         it('fail to search not existed pokémon', () => {
             // search "digimon"
-            cy.compare_pokemon('digimon', 'Nothing found.')
+            cy.comparePokemon('digimon', 'Nothing found.')
             cy.location('search').should('be.empty')
         })
     })
