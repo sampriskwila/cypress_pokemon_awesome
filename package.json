@@ -6,11 +6,12 @@
     "scripts": {
         "e2e:open": "cypress open",
         "e2e:run": "cypress run",
-        "e2e:compare-pokemons": "cypress run -b chrome -s \"cypress/e2e/compare-pokemons.cy.js\"",
-        "e2e:dark-mode": "cypress run -b chrome -s \"cypress/e2e/dark-mode.cy.js\"",
-        "e2e:nav-bar": "cypress run -b chrome -s \"cypress/e2e/nav-bar.cy.js\"",
-        "e2e:pokemon-details": "cypress run -b chrome -s \"cypress/e2e/pokemon-details.cy.js\"",
-        "e2e:search-and-filter": "cypress run -b chrome -s \"cypress/e2e/search-and-filter.cy.js\""
+        "e2e:compare-pokemons": "cypress run -b chrome -s \"cypress/e2e/compare-pokemons.cy.ts\"",
+        "e2e:dark-mode": "cypress run -b chrome -s \"cypress/e2e/dark-mode.cy.ts\"",
+        "e2e:evolutions": "cypress run -b chrome -s \"cypress/e2e/evolutions.cy.ts\"",
+        "e2e:nav-bar": "cypress run -b chrome -s \"cypress/e2e/nav-bar.cy.ts\"",
+        "e2e:pokemon-details": "cypress run -b chrome -s \"cypress/e2e/pokemon-details.cy.ts\"",
+        "e2e:search-and-filter": "cypress run -b chrome -s \"cypress/e2e/search-and-filter.cy.ts\""
     },
     "keywords": [],
     "author": "",
