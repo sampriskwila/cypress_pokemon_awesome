@@ -24,12 +24,8 @@ describe('Pokémon Details', () => {
         })
 
         it('can compare with other pokémons', () => {
-            cy.get('input[type="search"]').as('input')
-
             // search "ivy" and display Ivysaur
-            cy.get('@input').type('ivy').should('have.value', 'ivy')
-            cy.get('@input').next().find('ul').should('exist').and('contain', 'Ivysaur')
-            cy.get('@input').type('{enter}')
+            cy.comparePokemon('ivy', 'Ivysaur')
         })
     })
 
@@ -58,12 +54,8 @@ describe('Pokémon Details', () => {
         })
 
         it('can compare with other pokémons', () => {
-            cy.get('input[type="search"]').as('input')
-
             // search "ivy" and display Ivysaur
-            cy.get('@input').type('ivy').should('have.value', 'ivy')
-            cy.get('@input').next().find('ul').should('exist').and('contain', 'Ivysaur')
-            cy.get('@input').type('{enter}')
+            cy.comparePokemon('ivy', 'Ivysaur')
         })
     })
 
@@ -92,12 +84,8 @@ describe('Pokémon Details', () => {
         })
 
         it('can compare with other pokémons', () => {
-            cy.get('input[type="search"]').as('input')
-
             // search "ivy" and display Ivysaur
-            cy.get('@input').type('ivy').should('have.value', 'ivy')
-            cy.get('@input').next().find('ul').should('exist').and('contain', 'Ivysaur')
-            cy.get('@input').type('{enter}')
+            cy.comparePokemon('ivy', 'Ivysaur')
         })
     })
 })
