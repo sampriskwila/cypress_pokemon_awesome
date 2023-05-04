@@ -1,15 +1,8 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-    e2e: {
-        setupNodeEvents(on, config) {
-            on('before:browser:launch', (browser, launchOptions) => {
-                if (browser.name === 'chrome') {
-                    launchOptions.args.push('--incognito')
-                }
-                return launchOptions
-            })
-        },
-        baseUrl: 'https://pokemon-awesome.vercel.app',
-    },
-})
+	e2e: {
+		baseUrl: 'https://pokemon-awesome.vercel.app',
+		specPattern: 'cypress/e2e/**/*.spec.ts',
+	},
+});

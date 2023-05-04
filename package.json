@@ -1,25 +1,23 @@
 {
-    "name": "cypress_pokemon_awesome",
-    "version": "1.0.0",
-    "description": "End-to-end testing for Pokemon Awesome website",
-    "main": "index.js",
-    "scripts": {
-        "e2e:open": "cypress open",
-        "e2e:run": "cypress run",
-        "e2e:compare-pokemons": "cypress run -b chrome -s \"cypress/e2e/compare-pokemons.cy.ts\"",
-        "e2e:dark-mode": "cypress run -b chrome -s \"cypress/e2e/dark-mode.cy.ts\"",
-        "e2e:evolutions": "cypress run -b chrome -s \"cypress/e2e/evolutions.cy.ts\"",
-        "e2e:nav-bar": "cypress run -b chrome -s \"cypress/e2e/nav-bar.cy.ts\"",
-        "e2e:pokemon-details": "cypress run -b chrome -s \"cypress/e2e/pokemon-details.cy.ts\"",
-        "e2e:search-and-filter": "cypress run -b chrome -s \"cypress/e2e/search-and-filter.cy.ts\""
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "cypress": "^12.8.1"
-    },
-    "devDependencies": {
-        "typescript": "^4.9.5"
-    }
+	"name": "cypress_pokemon_awesome",
+	"version": "1.0.0",
+	"description": "End-to-end testing for Pokemon Awesome website",
+	"main": "index.js",
+	"scripts": {
+		"cy:open": "cypress open",
+		"cy:run": "cypress run",
+		"cy:compare-pokemons": "cypress run -b chrome -s \"cypress/e2e/compare-pokemons.spec.ts\"",
+		"cy:dark-mode": "cypress run -b chrome -s \"cypress/e2e/dark-mode.spec.ts\"",
+		"cy:evolutions": "cypress run -b chrome -s \"cypress/e2e/evolutions.spec.ts\"",
+		"cy:nav-bar": "cypress run -b chrome -s \"cypress/e2e/nav-bar.spec.ts\"",
+		"cy:pokemon-details": "cypress run -b chrome -s \"cypress/e2e/pokemon-details.spec.ts\"",
+		"cy:search-and-filter": "cypress run -b chrome -s \"cypress/e2e/search-and-filter.spec.ts\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"cypress": "^12.11.0",
+		"typescript": "^5.0.4"
+	}
 }
